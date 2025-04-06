@@ -1,0 +1,505 @@
+/* Styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f7f9fa;
+  color: #0f1419;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1a91da;
+}
+
+button:disabled {
+  background-color: #9ad0f5;
+  cursor: not-allowed;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfd9de;
+  border-radius: 4px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #1da1f2;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  border-bottom: 1px solid #eff3f4;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header h1 {
+  color: #1da1f2;
+  font-size: 24px;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #536471;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: #1da1f2;
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.nav-link.active {
+  color: #1da1f2;
+  font-weight: bold;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-link, .current-user {
+  font-weight: bold;
+  color: #0f1419;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #f4212e;
+  border: 1px solid #f4212e;
+}
+
+.logout-btn:hover {
+  background-color: rgba(244, 33, 46, 0.1);
+}
+
+.login-btn {
+  background-color: #1da1f2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #1a91da;
+  text-decoration: none;
+}
+
+.login-prompt {
+  padding: 15px;
+  background-color: #f7f9fa;
+  border-top: 1px solid #eff3f4;
+  text-align: center;
+}
+
+.login-prompt a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.back-button {
+  background-color: transparent;
+  color: #1da1f2;
+  padding: 5px 10px;
+}
+
+/* Login Page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f9fa;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  color: #1da1f2;
+  margin-bottom: 5px;
+}
+
+.login-header p {
+  color: #536471;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.tabs button {
+  flex: 1;
+  background-color: transparent;
+  color: #536471;
+  padding: 10px;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs button.active {
+  color: #1da1f2;
+  border-bottom: 2px solid #1da1f2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #536471;
+}
+
+/* Feed Page */
+.feed-page {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.tweet-form {
+  padding: 15px;
+  border-bottom: 10px solid #f7f9fa;
+}
+
+.tweet-form-header {
+  display: flex;
+  gap: 10px;
+}
+
+.tweet-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.char-count {
+  color: #536471;
+  font-size: 14px;
+}
+
+/* Tweets */
+.tweets-container {
+  background-color: white;
+}
+
+.tweets-container h2, .tweets-container h3 {
+  padding: 15px;
+  border-bottom: 1px solid #eff3f4;
+  color: #0f1419;
+}
+
+.tweet {
+  padding: 15px;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.tweet-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.username, .username-link {
+  font-weight: bold;
+  color: #0f1419;
+}
+
+.username-link:hover {
+  text-decoration: underline;
+}
+
+.date {
+  color: #536471;
+  font-size: 14px;
+}
+
+.content {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.delete-button {
+  background-color: transparent;
+  color: #f4212e;
+  font-size: 13px;
+  padding: 4px 8px;
+}
+
+.delete-button:hover {
+  background-color: rgba(244, 33, 46, 0.1);
+}
+
+/* Profile Page */
+.profile-page {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+  padding: 20px 15px;
+  border-bottom: 1px solid #eff3f4;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.join-date, .tweet-count {
+  color: #536471;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Users Page */
+.users-page {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.users-container {
+  padding-bottom: 20px;
+}
+
+.users-container h2 {
+  padding: 15px;
+  border-bottom: 1px solid #eff3f4;
+  color: #0f1419;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.user-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar {
+  margin-bottom: 10px;
+}
+
+.user-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info h3 {
+  margin-bottom: 5px;
+  color: #0f1419;
+}
+
+/* Messages */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  margin: 10px 15px;
+  border-radius: 4px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  margin: 10px 15px;
+  border-radius: 4px;
+}
+
+.loading-message, .empty-state {
+  padding: 20px 15px;
+  color: #536471;
+  text-align: center;
+}
+
+/* Error Page */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-page h1 {
+  color: #1da1f2;
+  margin-bottom: 15px;
+}
+
+.back-link {
+  margin-top: 20px;
+  color: #1da1f2;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .login-container {
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px;
+  }
+  
+  .app-header h1 {
+    font-size: 20px;
+  }
+  
+  button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .main-nav {
+    gap: 10px;
+  }
+  
+  .nav-link {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
