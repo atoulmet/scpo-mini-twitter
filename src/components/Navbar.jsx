@@ -18,9 +18,7 @@ const Navbar = () => {
             <Link to="/users" className="text-gray-700 hover:text-twitter-blue">
               Utilisateurs
             </Link>
-            <Link to="/profile/me" className="text-gray-700 hover:text-twitter-blue">
-              Profil
-            </Link>
+            
           </div>
         </div>
       </div>
