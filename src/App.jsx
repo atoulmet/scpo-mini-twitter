@@ -20,8 +20,10 @@ function App() {
           <Route path="/profile/:username" element={<ProfilePage />} />
           <Route path="/profile/edit" element={<EditProfilePage />} />
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/email-verified" element={<EmailVerifiedPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+
       </div>
     </Router>
   );
