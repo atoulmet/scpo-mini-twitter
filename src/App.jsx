@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import UsersPage from './pages/UsersPage';
+import EmailVerifiedPage from './pages/EmailVerifiedPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
