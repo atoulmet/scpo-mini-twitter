@@ -26,24 +26,25 @@ const FeedPage = ({ supabase, user }) => {
         .order('created_at', { ascending: false });
 
       if (tweetsError) throw tweetsError;
-      setTweets(tweetsData);
 
       // Charger les informations des utilisateurs
       const uniqueUserIds = [...new Set(tweetsData.map(tweet => tweet.user_id))];
-      const { data: usersData, error: usersError } = await supabase
-        .from('users')
-        .select('*')
-        .in('id', uniqueUserIds);
+      if (uniqueUserIds.length > 0) {
+        const { data: usersData, error: usersError } = await supabase
+          .from('users')
+          .select('*')
+          .in('id', uniqueUserIds);
 
-      if (usersError) throw usersError;
-      
-      // Créer un objet pour faciliter l'accès aux données utilisateur
-      const usersMap = {};
-      usersData.forEach(user => {
-        usersMap[user.id] = user;
-      });
-      
-      setUsers(usersMap);
+        if (usersError) throw usersError;
+
+        const usersMap = {};
+        usersData.forEach(user => {
+          usersMap[user.id] = user;
+        });
+
+        setUsers(usersMap);
+      }
+      setTweets(tweetsData);
     } catch (error) {
       console.error('Erreur lors du chargement des tweets:', error);
       setError('Impossible de charger les tweets');
