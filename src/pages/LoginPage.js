@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = ({ supabase }) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
@@ -22,9 +24,10 @@ const LoginPage = ({ supabase }) => {
       });
       
       if (error) throw error;
-      
+
       setEmail('');
       setPassword('');
+      navigate('/');
     } catch (error) {
       console.error('Erreur de connexion:', error.message);
       setError(error.message === 'Invalid login credentials'

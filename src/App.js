@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import FeedPage from './pages/FeedPage';
 import ProfilePage from './pages/ProfilePage';
 import UsersPage from './pages/UsersPage';
+import EditProfilePage from './pages/EditProfilePage';
 import './App.css';
 
 // Initialisation de Supabase - À remplacer par tes propres clés
@@ -77,6 +78,7 @@ function App() {
         <Route path="/" element={<FeedPage supabase={supabase} user={user} />} />
         <Route path="/profile/:username" element={<ProfilePage supabase={supabase} currentUser={user} />} />
         <Route path="/users" element={<UsersPage supabase={supabase} user={user} />} />
+        <Route path="/edit-profile" element={<EditProfilePage supabase={supabase} user={user} />} />
       </Routes>
     </Router>
   );

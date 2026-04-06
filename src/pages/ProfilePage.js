@@ -137,6 +137,9 @@ const ProfilePage = ({ supabase, currentUser }) => {
           <h2>@{profileUser.username}</h2>
           <p className="join-date">Membre depuis: {new Date(profileUser.created_at).toLocaleDateString('fr-FR')}</p>
           <p className="tweet-count">{tweets.length} tweet{tweets.length !== 1 ? 's' : ''}</p>
+          {isOwnProfile && (
+            <Link to="/edit-profile" className="edit-profile-btn">Modifier le profil</Link>
+          )}
         </div>
       </div>
 
