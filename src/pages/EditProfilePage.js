@@ -90,7 +90,7 @@ const EditProfilePage = ({ supabase, user }) => {
 
         <div className="edit-profile-avatar">
           <img
-            src={profilePicture || `https://api.dicebear.com/7.x/avatars/svg?seed=${username}`}
+            src={profilePicture || `https://api.dicebear.com/9.x/avataaars/svg?seed=${username}`}
             alt="Aperçu avatar"
           />
         </div>

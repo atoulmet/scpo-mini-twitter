@@ -127,7 +127,7 @@ const FeedPage = ({ supabase, user }) => {
           <form onSubmit={handlePostTweet}>
             <div className="tweet-form-header">
               <img 
-                src={user.profile_picture || `https://api.dicebear.com/7.x/avatars/svg?seed=${user.username}`}
+                src={user.profile_picture || `https://api.dicebear.com/9.x/avataaars/svg?seed=${user.username}`}
                 alt="Votre avatar"
                 className="tweet-avatar"
               />
@@ -160,7 +160,7 @@ const FeedPage = ({ supabase, user }) => {
               <div className="tweet-header">
                 <div className="tweet-user">
                   <img 
-                    src={users[tweet.user_id]?.profile_picture || `https://api.dicebear.com/7.x/avatars/svg?seed=${users[tweet.user_id]?.username}`}
+                    src={users[tweet.user_id]?.profile_picture || `https://api.dicebear.com/9.x/avataaars/svg?seed=${users[tweet.user_id]?.username}`}
                     alt={`Avatar de ${users[tweet.user_id]?.username}`}
                     className="tweet-avatar"
                   />

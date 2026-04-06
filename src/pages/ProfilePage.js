@@ -129,7 +129,7 @@ const ProfilePage = ({ supabase, currentUser }) => {
       <div className="profile-header">
         <div className="profile-avatar">
           <img
-            src={profileUser.profile_picture || `https://api.dicebear.com/7.x/avatars/svg?seed=${profileUser.username}`}
+            src={profileUser.profile_picture || `https://api.dicebear.com/9.x/avataaars/svg?seed=${profileUser.username}`}
             alt={`Avatar de ${profileUser.username}`}
           />
         </div>
@@ -153,7 +153,7 @@ const ProfilePage = ({ supabase, currentUser }) => {
               <div className="tweet-header">
                 <div className="tweet-user">
                   <img 
-                    src={profileUser.profile_picture || `https://api.dicebear.com/7.x/avatars/svg?seed=${profileUser.username}`}
+                    src={profileUser.profile_picture || `https://api.dicebear.com/9.x/avataaars/svg?seed=${profileUser.username}`}
                     alt={`Avatar de ${profileUser.username}`}
                     className="tweet-avatar"
                   />
