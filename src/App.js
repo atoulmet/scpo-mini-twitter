@@ -8,8 +8,8 @@ import UsersPage from './pages/UsersPage';
 import './App.css';
 
 // Initialisation de Supabase - À remplacer par tes propres clés
-const supabaseUrl = 'https://mxbgzdxfjfnzsraejwmz.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14Ymd6ZHhmamZuenNyYWVqd216Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM5NTM0MTYsImV4cCI6MjA1OTUyOTQxNn0.OcLng4uz5sOG3_VnJdtcGU-t7hZfuxluLSAFg5gCh8M';
+const supabaseUrl = 'https://szjuujagmhbwlsxpsagk.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6anV1amFnbWhid2xzeHBzYWdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0OTcyNzgsImV4cCI6MjA5MTA3MzI3OH0.Vxr0wrnhicXgeDB1P3R2SewQ4Bhzeig4VhSoP285CAE';
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
