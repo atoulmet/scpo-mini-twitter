@@ -80,7 +80,7 @@ const UsersPage = ({ supabase, user }) => {
                 className="user-card"
               >
                 <div className="user-avatar">
-                  <img src={userItem.profile_picture} alt={`Avatar de ${userItem.username}`} />
+                  <img src={userItem.profile_picture || `https://api.dicebear.com/7.x/avatars/svg?seed=${userItem.username}`} alt={`Avatar de ${userItem.username}`} />
                 </div>
                 <div className="user-info">
                   <h3>@{userItem.username}</h3>
