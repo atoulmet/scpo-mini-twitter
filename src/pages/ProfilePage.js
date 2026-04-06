@@ -17,6 +17,7 @@ const ProfilePage = ({ supabase, currentUser }) => {
 
   useEffect(() => {
     fetchUserProfile();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [username]);
 
   const fetchUserProfile = async () => {
