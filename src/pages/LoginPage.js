@@ -16,7 +16,7 @@ const LoginPage = ({ supabase }) => {
     setLoading(true);
     
     try {
-      const { error } = await supabase.auth.sign({
+      const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
